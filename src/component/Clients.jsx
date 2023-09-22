@@ -26,7 +26,11 @@ const Clients = () => {
           </thead>
           <tbody>
             {clients.map((elem, i) => (
-              <ClientRow key={elem._id} client={elem} index={i} />
+              <ClientRow
+                key={i + Math.floor(Math.random() * 100)}
+                client={elem}
+                index={i}
+              />
             ))}
           </tbody>
         </table>

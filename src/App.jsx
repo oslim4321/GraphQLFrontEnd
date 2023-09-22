@@ -1,17 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import AddClient from "./component/AddClient";
-import Clients from "./component/Clients";
 import Header from "./component/Header";
-import Project from "./component/Project";
+import { Home } from "./pages/Home";
+import NotFound from "./pages/NotFound";
 function App() {
+  // <Project />
   return (
     <>
-      <Header />
-      <div className="container">
-        <AddClient />
-        <Project />
-        <Clients />
-      </div>
+      <Router>
+        <Header />
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="*" element={<NotFound />}></Route>
+          </Routes>
+        </div>
+      </Router>
     </>
   );
 }

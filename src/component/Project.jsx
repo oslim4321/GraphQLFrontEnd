@@ -13,10 +13,13 @@ const Project = () => {
   return (
     <>
       {!loading && projects.length > 0 && (
-        <div>
-          {projects.map((project) => (
+        <div className="row  mt-5">
+          {projects.map((project, i) => (
             // <p>{project.name}</p>
-            <ProjectsCard key={project.id} project={project} />
+            <ProjectsCard
+              key={i + Math.floor(Math.random() * 100)}
+              project={project}
+            />
           ))}
         </div>
       )}

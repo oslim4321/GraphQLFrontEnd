@@ -18,6 +18,7 @@ code {
 
 .navbar-brand {
   color: #df3ca6;
+  text-decoration: none;
 }
 
 .navbar-brand img {
