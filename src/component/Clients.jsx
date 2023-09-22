@@ -19,10 +19,11 @@ const Clients = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Something Went Wrong</p>;
   const { clients } = data;
+  console.log(clients, "clients");
   return (
     <div>
       {!loading && !error && (
-        <table class="table">
+        <table className="table">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -33,8 +34,8 @@ const Clients = () => {
             </tr>
           </thead>
           <tbody>
-            {clients.map((elem) => (
-              <ClientRow />
+            {clients.map((elem, i) => (
+              <ClientRow key={elem._id} client={elem} index={i} />
             ))}
           </tbody>
         </table>

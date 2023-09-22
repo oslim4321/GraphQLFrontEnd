@@ -1,17 +1,15 @@
-import './App.css'
-import Clients from './component/Clients'
-import Header from './component/Header'
-
+import "./App.css";
+import Clients from "./component/Clients";
+import Header from "./component/Header";
 function App() {
-
   return (
     <>
-    <Header/>
+      <Header />
       <div className="container">
-       <Clients/>
+        <Clients />
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
