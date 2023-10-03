@@ -5,6 +5,7 @@ import { GET_PROJECT } from "../component/Query/ProjectQuery";
 import { Link, useParams } from "react-router-dom";
 import ClientInfo from "../component/ClientInfo";
 import DeleteProject from "../component/DeleteProject";
+import EditProject from "../component/EditProject";
 
 const Project = () => {
   const { id } = useParams();
@@ -31,6 +32,7 @@ const Project = () => {
           <h5 className="mt-3">Project Status</h5>
           <p className="lead">{project.status}</p>
           <ClientInfo client={project.client} />
+          <EditProject project={project} />
           <div className="d-flex justify-content-end py-3">
             <DeleteProject projectId={id} />
           </div>
